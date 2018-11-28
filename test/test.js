@@ -67,6 +67,14 @@ describe('Error Formatter', function() {
             chai.assert.equal(error.message, "My name is {name}");
         });
 
+        it('does nothing when there are no placeholders.', function() {
+            let error = new FormattedError("My name is name", {
+                name: 'Chris'
+            });
+
+            chai.assert.equal(error.message, "My name is name");
+        });
+
         it('throws an error when message is not a string.', function() {
             chai.expect(function(){
                 let message = new FormattedError(true, {

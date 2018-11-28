@@ -111,14 +111,15 @@ const FormattedError = (function(){
                 throw new Error("Argument 'params' must be an object.");
             }
 
-            let breadcrumbs = message
-                .match(/\{(.*?)\}/g)
-                .map(stripBracketsAndSeparateByPeriods);
+            let placeholders = message.match(/\{(.*?)\}/g);
 
-            for (let crumb in breadcrumbs) {
-                let param = searchForParam(breadcrumbs[crumb], params);
-                if (param)
-                    message = message.replace(`{${breadcrumbs[crumb].join('.')}}`, param);
+            if (placeholders) {
+                let breadcrumbs  = placeholders.map(stripBracketsAndSeparateByPeriods);
+                for (let crumb in breadcrumbs) {
+                    let param = searchForParam(breadcrumbs[crumb], params);
+                    if (param)
+                        message = message.replace(`{${breadcrumbs[crumb].join('.')}}`, param);
+                }
             }
 
             return message;
