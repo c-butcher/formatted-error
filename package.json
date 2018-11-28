@@ -13,7 +13,8 @@
   "keywords": [
     "Error",
     "Errors",
-    "Placeholders"
+    "Placeholders",
+    "Formatter"
   ],
   "author": "Chris Butcher",
   "license": "MIT",
