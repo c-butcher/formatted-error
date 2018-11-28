@@ -63,11 +63,7 @@ const FormattedError = require('formatted-error');
 try{
     
     throw new FormattedError("Hello {user.profile.nickname}!", {
-        user: {
-            profile: {
-                nickname: 'Captain Awesome',
-            }
-        }
+        user: { profile: { nickname: 'Captain Awesome' } }
     });
     
 } catch (error) {
@@ -87,12 +83,9 @@ const FormattedError = require('formatted-error');
 
 try{
     
-    let message = "Here are a few of my favorite things {primitives}!";
-    let params = {
+    throw new FormattedError("Here are a few of my favorite things {primitives}!", {
         primitives: ['pizza', 42, true]
-    };
-    
-    throw new FormattedError(message, params);
+    });
     
 } catch (error) {
     
@@ -110,17 +103,13 @@ const FormattedError = require('formatted-error');
 
 try{
     
-    let message = "Here is my {ignore} placeholder!";
-    let params = {
+    throw new FormattedError("Here is my {ignore} placeholder!", {
         ignore: [
             { name: 'Joseph' },
             { name: 'Jacob' },
-            { name: 'Jingleheimer' },
             { name: 'Schmidt' },
         ]
-    };
-    
-    throw new FormattedError(message, params);
+    });
     
 } catch (error) {
     
