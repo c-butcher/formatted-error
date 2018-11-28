@@ -1,0 +1,28 @@
+{
+  "name": "formatted-error",
+  "version": "1.0.0",
+  "description": "Allows you to use placeholders in errors.",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-butcher/formatted-error.git"
+  },
+  "keywords": [
+    "Error",
+    "Errors",
+    "Placeholders"
+  ],
+  "author": "Chris Butcher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c-butcher/formatted-error/issues"
+  },
+  "homepage": "https://github.com/c-butcher/formatted-error#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
