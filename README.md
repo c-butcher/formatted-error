@@ -1,6 +1,6 @@
 # Formatted Errors
 
-[![Build Status](https://travis-ci.com/c-butcher/data-errors.svg?branch=master)](https://travis-ci.com/c-butcher/data-validators)
+[![Build Status](https://travis-ci.com/c-butcher/formatted-error.svg?branch=master)](https://travis-ci.com/c-butcher/formatted-error)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://travis-ci.com/c-butcher/data-validators)
 
 This is a JavaScript Error object that lets you use placeholders in your error message, then
